@@ -101,7 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Chipotle')),
+            ElevatedButton(
+                onPressed: _incrementCounter, child: Text('Chipotle')),
             ElevatedButton(onPressed: () {}, child: Text('McDonalds')),
             ElevatedButton(onPressed: () {}, child: Text('Taco Bell'))
           ],
