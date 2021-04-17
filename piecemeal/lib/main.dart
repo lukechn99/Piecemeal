@@ -1,4 +1,6 @@
+// @dart=2.9
 import 'package:flutter/material.dart';
+import 'package:piecemeal/database.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Piecemeal',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -45,8 +47,6 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class FoodItems extends ElevatedButton {}
-
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
@@ -60,8 +60,6 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
   }
-
-  void _openDonation() {}
 
   @override
   Widget build(BuildContext context) {
@@ -109,7 +107,12 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Database()),
+          );
+        },
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
