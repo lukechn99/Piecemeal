@@ -10,3 +10,7 @@
 ***Firebase setup with***  
 https://firebase.google.com/docs/flutter/setup?platform=android  
 https://firebase.flutter.dev/docs/database/overview/
+
+***Todo***
+Set up database security with rules  
+Link payment methods  
