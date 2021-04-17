@@ -4,8 +4,9 @@ import 'package:firebase_core/firebase_core.dart';
 
 /**
  * Sources:
- * https://codesundar.com/flutter-firebase-database-tutorial/
- * 
+ * [method setup] https://codesundar.com/flutter-firebase-database-tutorial/
+ * [init user] https://stackoverflow.com/questions/52210694/flutter-how-to-write-data-in-firebase-realtime-ddb-permission-denied
+ * [rules] https://firebase.google.com/docs/database/security
  */
 
 class Database extends StatefulWidget {
@@ -14,6 +15,7 @@ class Database extends StatefulWidget {
 }
 
 class _DatabaseState extends State<Database> {
+  String _contents = "";
   final textcontroller = TextEditingController();
   // final databaseRef = FirebaseDatabase.instance.reference();
   final databaseRef = FirebaseDatabase().reference().child('data');
@@ -27,7 +29,9 @@ class _DatabaseState extends State<Database> {
 
   void printFirebase() {
     databaseRef.once().then((DataSnapshot snapshot) {
-      print('Data : ${snapshot.value}');
+      setState(() {
+        _contents = 'Data : ${snapshot.value}';
+      });
     });
   }
 
@@ -66,8 +70,12 @@ class _DatabaseState extends State<Database> {
                           onPressed: () {
                             printFirebase();
                           },
-                          child: Text('Print database')),
-                    )
+                          child: Text('Show database')),
+                    ),
+                    Text(
+                      '$_contents',
+                      style: Theme.of(context).textTheme.headline4,
+                    ),
                   ],
                 ),
               );
