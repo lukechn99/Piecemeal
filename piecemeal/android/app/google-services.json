@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "950191640393",
+    "project_id": "piecemeal-eb0c2",
+    "storage_bucket": "piecemeal-eb0c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950191640393:android:d6183e1e7f36ae7f24d498",
+        "android_client_info": {
+          "package_name": "com.example.piecemeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950191640393-mu09f93t10jsvgh5mkuivi7g50ucvbkd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDibvfMT4MPN6WOEEmmKj8PY2H17F0ivng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950191640393-mu09f93t10jsvgh5mkuivi7g50ucvbkd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
